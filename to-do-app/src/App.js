@@ -7,6 +7,7 @@ export default function App() {
       // setToDos is a function that sets the toDos state
       // useState is a hook that returns the current toDos state
   const [toDos, setToDos] = useState([]);
+
   const addToList = task => {
     console.log(task);
     setToDos([...toDos, task]);
@@ -19,6 +20,7 @@ export default function App() {
       <NavBar />
       <div className='container'>
         <ToDoForm addToList={addToList}/>
+        {toDos.map(toDo => <h1 className=''> { toDo }</h1>)}
       </div>
 
     </div>

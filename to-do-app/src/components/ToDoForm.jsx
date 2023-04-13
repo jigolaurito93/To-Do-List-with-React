@@ -14,7 +14,7 @@ export default function ToDoForm({ addToList }) {
         <div className="form-group">
             <label htmlFor="task">Enter task</label>
             <input type="text" name="task" className='form-control' id="" placeholder='Enter a Task...'/>
-            <input type="submit" value="Add Task" className='btn btn-outline-success w-100 mt-3' />
+            <input type="submit" value="Add Task" className='btn btn-outline-success w-100 mt-3 mb-4' />
         </div>
     </form>
   )
