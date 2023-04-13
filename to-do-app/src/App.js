@@ -12,11 +12,13 @@ export default function App() {
     setToDos([...toDos, task]);
   }
 
+  
+
   return (
     <div>
       <NavBar />
       <div className='container'>
-        <ToDoForm/>
+        <ToDoForm addToList={addToList}/>
       </div>
 
     </div>

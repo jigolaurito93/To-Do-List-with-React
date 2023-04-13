@@ -1,8 +1,15 @@
 import React from 'react'
 
-export default function ToDoForm() {
+export default function ToDoForm({ addToList }) {
+
+    function handleClick(e){
+        e.preventDefault();
+        const newTask = e.target.task.value;
+        addToList(newTask);
+    }
+
   return (
-    <form action="">
+    <form action="" onSubmit={handleClick}>
         <h1 className='text-center'>Add A Task</h1>
         <div className="form-group">
             <label htmlFor="task">Enter task</label>
