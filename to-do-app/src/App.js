@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import NavBar from './components/NavBar'
 import ToDoForm from './components/ToDoForm'
+import ToDoList from './components/ToDoList';
 
 export default function App() {
       // toDos is the current list of toDos
@@ -13,14 +14,13 @@ export default function App() {
     setToDos([...toDos, task]);
   }
 
-  
 
   return (
     <div>
       <NavBar />
       <div className='container'>
         <ToDoForm addToList={addToList}/>
-        {toDos.map(toDo => <h1 className=''> { toDo }</h1>)}
+        <ToDoList taskList = {toDos}/>
       </div>
 
     </div>
